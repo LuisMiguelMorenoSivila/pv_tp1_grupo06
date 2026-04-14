@@ -1,0 +1,59 @@
+/* Variables para Consistencia Visual (:root) */
+:root {
+    --color-primario: #2c3e50;    /* Azul oscuro */
+    --color-secundario: #3498db;  /* Azul claro */
+    --color-fondo: #f4f4f4;       /* Gris muy claro */
+    --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estructura General con CSS Grid */
+body {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--fuente-base);
+    background-color: var(--color-fondo);
+}
+
+header { 
+    grid-area: header; 
+    background-color: var(--color-primario); 
+    color: white; 
+    padding: 1rem; 
+    text-align: center; 
+}
+
+/* Flexbox para el Navegador (nav) */
+nav { 
+    grid-area: nav; 
+    background-color: #ecf0f1; 
+}
+
+nav ul {
+    display: flex; /* Flexbox activado */
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Interactividad (:hover, :active) */
+nav a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+main { grid-area: main; padding: 20px; }
+footer { grid-area: footer; text-align: center; padding: 1rem; background: #ddd; }

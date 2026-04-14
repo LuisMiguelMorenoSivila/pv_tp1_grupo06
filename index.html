@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard - Grupo 06</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Aplicamos un estilo único a la sección de estadísticas */
+        .stats-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Ejemplo de selector por ID para destacar el título de novedades */
+        #novedades-titulo {
+            border-bottom: 2px solid var(--color-secundario);
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,20 +37,20 @@
     </header>
 
     <main>
-        <section>
+        <section class="stats-container">
             <h2>Estadísticas Generales</h2>
             <p>Estado actual de la plataforma:</p>
             <ul>
-                <li><strong>Proyectos en curso:</strong> 08</li>
-                <li><strong>Tareas pendientes para hoy:</strong> 04</li>
-                <li><strong>Mensajes sin leer:</strong> 12</li>
+                <li><strong>Proyectos en curso:</strong> <span style="color: blue; font-weight: bold;">08</span></li>
+                <li><strong>Tareas pendientes para hoy:</strong> <span style="color: red; font-weight: bold;">04</span></li>
+                <li><strong>Mensajes sin leer:</strong> <span style="color: green; font-weight: bold;">12</span></li>
             </ul>
         </section>
 
         <hr>
 
         <section>
-            <h2>Novedades del Equipo</h2>
+            <h2 id="novedades-titulo">Novedades del Equipo</h2>
             <p>Últimas acciones realizadas:</p>
             <ul>
                 <li><strong>Integrante del grupo</strong> subió la estructura de <em>proyectos.html</em>.</li>

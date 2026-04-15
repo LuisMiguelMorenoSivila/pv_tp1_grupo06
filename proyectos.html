@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorador de Proyectos</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contenedor-proyectos { 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            }
+            article {
+                border: 1px solid #ccc;
+                padding: 15px;
+                width: 250px;
+                background-color: #f9f9f9;
+                border-radius: 6px;
+            }
+            img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
     <header> 
@@ -15,8 +36,9 @@
             <a href="perfil.html">Mi Perfil</a>
         </nav>
     </header>
+    <main>
     <aside>
-        <h3>Filtros de búsqueda</h3>
+        <h2>Filtros de búsqueda</h2>
         <label>Categoría:</label>
         <select>
             <option>Base de Datos II</option>
@@ -33,8 +55,8 @@
             <option>2025</option>
             <option>2026</option>
         </select>
-
-        <br><br><label>Estado:</label>
+        <br><br>
+        <label>Estado:</label>
         <select>
             <option>En curso</option>
             <option>Finalizado</option>
@@ -44,11 +66,12 @@
     <hr>
     <section>
         <h2>Listado de Proyectos</h2>
+        <div class="contenedor-proyectos">
         <article>
             <h3>Proyecto: Diseño de Base de Datos</h3>
-            <!--Imagen-->
+            <img src="C:\Users\dory\Downloads\programacion visual\imagenes" alt="servidor de datos">
             <!--Descripcion-->
-            <p>Categoría: Base de Datos II</p>
+            <p style="font-weight: bold; color: #2c3e50;">Categoría: Base de Datos</p>
             <a href="detalle.html">Ver detalle</a>
         </article>
 
@@ -56,9 +79,9 @@
 
         <article>
             <h3>Proyecto: Traduccion Tecnica Ingles III</h3>
-             <!--Imagen-->
+            <img src="C:\Users\dory\Downloads\programacion visual\imagenes" alt="Libros y Diccionarios">
             <!--Descripcion-->
-            <p>Categoría:Idiomas</p>
+            <p style="font-weight: bold; color: #2c3e50;">Categoría: Idiomas</p>
             <a href="detalle.html">Ver detalle</a>
         </article>
 
@@ -66,9 +89,9 @@
 
         <article>
             <h3>Proyecto: Calculadora en C</h3>
-            <!--Imagen-->
+            <img src="C:\Users\dory\Downloads\programacion visual\imagenes" alt="Codigo de Programacion">
             <!--Descripcion-->
-            <p>Categoría: Programación Estructurada</p>
+            <p style="font-weight: bold; color: #2c3e50;">Categoría: Programación</p>
             <a href="detalle.html">Ver detalle</a>
         </article>
 
@@ -76,22 +99,23 @@
 
         <article>
             <h3>Proyecto: Instalacin de Linux Debian</h3>
-            <!--Imagen-->
+            <img src="C:\Users\dory\Downloads\programacion visual\imagenes" alt="Terminal de Linux">
             <!--Descripcion-->
-            <p>Categoría: Lab. de Sistemas Operativos</p>
+            <p style="font-weight: bold; color: #2c3e50;">Categoría: Sistemas Operativos</p>
             <a href="detalle.html">Ver detalle</a>
         </article>
         <hr>
 
         <article>
             <h3>Proyecto: Lista de Nombres Ordenada</h3>
-            <!--Imagen-->
+            <img src="C:\Users\dory\Downloads\programacion visual\imagenes" alt="Ordenamiento de Datos">
             <p>Descripción breve: Un ejercicio para guardar nombres y que se acomoden solos alfabéticamente.</p>
-            <p>Categoría: Estructura de Datos</p>
+            <p style="font-weight: bold; color: #2c3e50;">Categoría: Programación</p>
             <a href="detalle.html">Ver detalle</a>
         </article>
-<hr>
-
-    </section>
+        <hr>
+        </div>
+     </section>
+    </main>
 </body>
 </html>
